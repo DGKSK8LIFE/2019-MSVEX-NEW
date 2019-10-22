@@ -9,7 +9,7 @@
 #include "vex.h"
 
 using namespace vex;
-vex::competition Competition;
+competition Competition;
 
 // define your global instances of motors and other devices here
 controller Controller;
@@ -83,19 +83,19 @@ void usercontrol( void ) {
     frontRightMotor .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
     backRightMotor  .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
 
-  
+
     // Cube Tray Angler //
     if (Controller.ButtonR1.pressing()){ // Top Right Bumper (R1): Push Cube Tray Forward
       ctaMotor.spin(directionType::fwd, 25, velocityUnits::pct);
       if (ctaMotor.rotation(rotationUnits::deg) > 90)
-        ctaMotor.stop();
+        ctaMotor.stop(coast);
     } else if (Controller.ButtonR2.pressing()) { // Bottom Right Bumper (R2): Pull Cube Tray Back
       ctaMotor.spin(directionType::rev, 25, velocityUnits::pct);
       if (ctaMotor.rotation(rotationUnits::deg) > 90)
-        ctaMotor.stop();
+        ctaMotor.stop(coast);
     }
 
-
+    // 
     if (Controller.ButtonL1.pressing()){
       intakeMotorOne.spin(directionType::fwd, 50, velocityUnits::pct);
       intakeMotorTwo.spin(directionType::rev, 50, velocityUnits::pct);
