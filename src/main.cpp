@@ -72,6 +72,7 @@ void usercontrol( void ) {
   // User control code here, inside the loop
   double straight;
   double rotate;
+  bool isPullingBack = false;
   while (1) {
 
     // Drive Code (Split Arcade) //
@@ -86,27 +87,38 @@ void usercontrol( void ) {
 
     // Cube Tray Angler //
     if (Controller.ButtonR1.pressing()){ // Top Right Bumper (R1): Push Cube Tray Forward
-      ctaMotor.spin(directionType::fwd, 25, velocityUnits::pct);
-      if (ctaMotor.rotation(rotationUnits::deg) > 90)
-        ctaMotor.stop(coast);
+      isPullingBack = false;
+      while (1) {
+        ctaMotor.spin(directionType::fwd, 50, velocityUnits::pct);
+        if (ctaMotor.rotation(rotationUnits::deg) > 90){
+          ctaMotor.stop(coast);
+          break;
+        }
+      }
     } else if (Controller.ButtonR2.pressing()) { // Bottom Right Bumper (R2): Pull Cube Tray Back
-      ctaMotor.spin(directionType::rev, 25, velocityUnits::pct);
-      if (ctaMotor.rotation(rotationUnits::deg) > 90)
-        ctaMotor.stop(coast);
+      isPullingBack = true;
     }
 
-    // 
+    if (isPullingBack) { // Code to Pull Cube Tray Back
+      if (ctaMotor.rotation(rotationUnits::deg) < 45) {
+        ctaMotor.spin(directionType::rev, 50, velocityUnits::pct);
+      } else {
+        ctaMotor.stop();
+      }
+    }
+
     if (Controller.ButtonL1.pressing()){
-      intakeMotorOne.spin(directionType::fwd, 50, velocityUnits::pct);
-      intakeMotorTwo.spin(directionType::rev, 50, velocityUnits::pct);
+      intakeMotorOne.spin(directionType::fwd, 100, velocityUnits::pct);
+      intakeMotorTwo.spin(directionType::rev, 100, velocityUnits::pct);
     }
   }
 }
 
+
 //
 // Main will set up the competition functions and callbacks.
 //
-int main() {
+int main(){
     //Set up callbacks for autonomous and driver control periods.
     Competition.autonomous( autonomous );
     Competition.drivercontrol( usercontrol );
