@@ -12,15 +12,15 @@ using namespace vex;
 vex::competition Competition;
 
 // define your global instances of motors and other devices here
-vex::controller Controller;
-vex::brain Brain;
-vex::motor frontLeftMotor(vex::PORT10, vex::gearSetting::ratio18_1, false);
-vex::motor backLeftMotor(vex::PORT1, vex::gearSetting::ratio18_1, false);
-vex::motor frontRightMotor(vex::PORT20, vex::gearSetting::ratio18_1, false);
-vex::motor backRightMotor(vex::PORT11, vex::gearSetting::ratio18_1, false);
-vex::motor ctaMotor(vex::PORT16, vex::gearSetting::ratio18_1, false);
-vex::motor intakeMotorOne(vex::PORT21, vex::gearSetting::ratio18_1, false);
-vex::motor intakeMotorTwo(vex::PORT22, vex::gearSetting::ratio18_1, false);
+controller Controller;
+brain Brain;
+motor frontLeftMotor  (PORT10,  gearSetting::ratio18_1, false);
+motor backLeftMotor   (PORT1,   gearSetting::ratio18_1, false);
+motor frontRightMotor (PORT20,  gearSetting::ratio18_1, false);
+motor backRightMotor  (PORT11,  gearSetting::ratio18_1, false);
+motor ctaMotor        (PORT16,  gearSetting::ratio18_1, false);
+motor intakeMotorOne  (PORT21,  gearSetting::ratio18_1, false);
+motor intakeMotorTwo  (PORT22,  gearSetting::ratio18_1, false);
 
 
 
@@ -37,6 +37,7 @@ vex::motor intakeMotorTwo(vex::PORT22, vex::gearSetting::ratio18_1, false);
 void pre_auton( void ) {
   // All activities that occur before the competition starts
   // Example: clearing encoders, setting servo positions, ...
+  ctaMotor.setRotation(0, rotationUnits::deg);
   
 }
 
@@ -72,27 +73,32 @@ void usercontrol( void ) {
   double straight;
   double rotate;
   while (1) {
-    // This is the main execution loop for the user control program.
-    // Each time through the loop your program should update motor + servo 
-    // values based on feedback from the joysticks.
 
+    // Drive Code (Split Arcade) //
     straight = Controller.Axis3.position();
     rotate = Controller.Axis1.position();
 
-    frontLeftMotor.spin(vex::directionType::fwd, (straight-rotate), vex::velocityUnits::pct);
-    backLeftMotor.spin(vex::directionType::fwd, (straight-rotate), vex::velocityUnits::pct);
-    frontRightMotor.spin(vex::directionType::fwd, (straight + rotate), vex::velocityUnits::pct);
-    backRightMotor.spin(vex::directionType::fwd, (straight+rotate), vex::velocityUnits::pct);
+    frontLeftMotor  .spin(directionType::fwd, (straight - rotate), velocityUnits::pct);
+    backLeftMotor   .spin(directionType::fwd, (straight - rotate), velocityUnits::pct);
+    frontRightMotor .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
+    backRightMotor  .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
+
   
-    if (Controller.ButtonR1.pressing()){
-      ctaMotor.spin(vex::directionType::fwd, 25, vex::velocityUnits::pct);
-    } else if (Controller.ButtonR2.pressing()) {
-      ctaMotor.spin(vex::directionType::rev, 25, vex::velocityUnits::pct);
+    // Cube Tray Angler //
+    if (Controller.ButtonR1.pressing()){ // Top Right Bumper (R1): Push Cube Tray Forward
+      ctaMotor.spin(directionType::fwd, 25, velocityUnits::pct);
+      if (ctaMotor.rotation(rotationUnits::deg) > 90)
+        ctaMotor.stop();
+    } else if (Controller.ButtonR2.pressing()) { // Bottom Right Bumper (R2): Pull Cube Tray Back
+      ctaMotor.spin(directionType::rev, 25, velocityUnits::pct);
+      if (ctaMotor.rotation(rotationUnits::deg) > 90)
+        ctaMotor.stop();
     }
 
+
     if (Controller.ButtonL1.pressing()){
-      intakeMotorOne.spin(vex::directionType::rev, 50, vex::velocityUnits::pct);
-      intakeMotorTwo.spin(vex::directionType::rev, 50, vex::velocityUnits::pct);
+      intakeMotorOne.spin(directionType::fwd, 50, velocityUnits::pct);
+      intakeMotorTwo.spin(directionType::rev, 50, velocityUnits::pct);
     }
   }
 }
@@ -112,5 +118,4 @@ int main() {
     while(1) {
       vex::task::sleep(100);//Sleep the task for a short amount of time to prevent wasted resources.
     }    
-       
 }
