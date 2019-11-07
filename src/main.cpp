@@ -1,3 +1,25 @@
+// To complete the VEXcode V5 Text project upgrade process, please follow the
+// steps below.
+// 
+// 1. You can use the Robot Configuration window to recreate your V5 devices
+//   - including any motors, sensors, 3-wire devices, and controllers.
+// 
+// 2. All previous code located in main.cpp has now been commented out. You
+//   will need to migrate this code to the new "int main" structure created
+//   below and keep in mind any new device names you may have set from the
+//   Robot Configuration window. 
+// 
+// If you would like to go back to your original project, a complete backup
+// of your original (pre-upgraded) project was created in a backup folder
+// inside of this project's folder.
+
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// ---- END VEXCODE CONFIGURED DEVICES ----
+
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// ---- END VEXCODE CONFIGURED DEVICES ----
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
@@ -13,7 +35,6 @@ competition Competition;
 
 // define your global instances of motors and other devices here
 controller Controller;
-brain Brain;
 motor frontLeftMotor  (PORT10,  gearSetting::ratio18_1, false);
 motor backLeftMotor   (PORT1,   gearSetting::ratio18_1, false);
 motor frontRightMotor (PORT20,  gearSetting::ratio18_1, false);
@@ -118,16 +139,16 @@ void usercontrol( void ) {
 //
 // Main will set up the competition functions and callbacks.
 //
-int main(){
-    //Set up callbacks for autonomous and driver control periods.
-    Competition.autonomous( autonomous );
-    Competition.drivercontrol( usercontrol );
+int main() {
+  // Initializing Robot Configuration. DO NOT REMOVE!
+  vexcodeInit();
+  Competition.autonomous( autonomous );
+  Competition.drivercontrol( usercontrol );
     
-    //Run the pre-autonomous function. 
-    pre_auton();
-       
-    //Prevent main from exiting with an infinite loop.                        
-    while(1) {
-      vex::task::sleep(100);//Sleep the task for a short amount of time to prevent wasted resources.
-    }    
+  //Run the pre-autonomous function.                         
+  while(1) {
+    vex::task::sleep(100);//Sleep the task for a short amount of time to prevent wasted resources.
+  } 
 }
+
+        
