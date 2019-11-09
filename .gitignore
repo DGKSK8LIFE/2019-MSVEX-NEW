@@ -1,5 +1,4 @@
-/.vscode
-/bin
-/build
+.vscode/
+bin/
+build/
 compile_commands.json
-2019-MSVEXv2.v5code
