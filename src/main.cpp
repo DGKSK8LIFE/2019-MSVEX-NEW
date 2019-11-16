@@ -35,9 +35,7 @@ motor intakeMotorRight (PORT8,   gearSetting::ratio18_1, false);
 
 void pre_auton( void ) {
   // All activities that occur before the competition starts
-  // Example: clearing encoders, setting servo positions, ...
-  ctaMotor.setRotation(0, rotationUnits::deg);
-  
+  // Example: clearing encoders, setting servo positions, ...               
 }
 
 /*---------------------------------------------------------------------------*/
@@ -66,19 +64,23 @@ void autonomous( void ) {
 /*                                                                           */
 /*  You must modify the code to add your own robot specific commands here.   */
 /*---------------------------------------------------------------------------*/
+bool trayUp = false;
+void setTray(bool up) {
+  trayUp = up;
+  const int ang = (up) ? -315 : 0;
+  ctaMotor.rotateTo(ang, rotationUnits::deg, 50, velocityUnits::pct, false);
+}
+void toggleTray() {
+  setTray(!trayUp);
+}
 
-void usercontrol( void ) {
-  // User control code here, inside the loop
-  double straight;
-  double rotate;
-  Brain.Screen.clearScreen();
-  Brain.Screen.print("Actual Comp code is running");
-  // bool isPullingBack = false;
-  while (1) {
+void usercontrol() {
+  while (true) {
+    Controller.ButtonL2.pressed(toggleTray);
 
     // Drive Code (Split Arcade) //
-    straight = Controller.Axis3.position();
-    rotate = Controller.Axis1.position();
+    double straight = Controller.Axis3.position();
+    double rotate = Controller.Axis1.position();
 
     frontLeftMotor  .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
     backLeftMotor   .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
@@ -86,48 +88,17 @@ void usercontrol( void ) {
     backRightMotor  .spin(directionType::fwd, (straight - rotate), velocityUnits::pct);
 
 
-    // Cube Tray Angler //
-    if (Controller.ButtonR1.pressing()) {
-      ctaMotor.rotateTo(0, rotationUnits::deg, 50, velocityUnits::pct, false);
-    }
-    if (Controller.ButtonR2.pressing()) {
-      ctaMotor.rotateTo(185, rotationUnits::deg, 50, velocityUnits::pct, false);
-    }
-
     if (Controller.ButtonL1.pressing()) {
       intakeMotorLeft.spin(directionType::fwd, 100, velocityUnits::pct);
     } else {
-      intakeMotorLeft.stop();
+      intakeMotorLeft.stop(brakeType::coast);
     }
     if (Controller.ButtonL1.pressing()) {
       intakeMotorRight.spin(directionType::fwd, 100, velocityUnits::pct);
     } else {
-      intakeMotorRight.stop();
+      intakeMotorRight.stop(brakeType::coast);
     }
-
-    // if (Controller.ButtonR1.pressing()){ // Top Right Bumper (R1): Push Cube Tray Forward
-    //   isPullingBack = false;
-    //   while (1) {
-    //     ctaMotor.spin(directionType::fwd, 50, velocityUnits::pct);
-    //     if (ctaMotor.rotation(rotationUnits::deg) > 90){
-    //       ctaMotor.stop(coast);
-    //       break;
-    //     }
-    //   }
-    // } else if (Controller.ButtonR2.pressing()) { // Bottom Right Bumper (R2): Pull Cube Tray Back
-    //   isPullingBack = true;
-    // }
-    // if (isPullingBack) { // Code to Pull Cube Tray Back
-    //   if (ctaMotor.rotation(rotationUnits::deg) < 45) {
-    //     ctaMotor.spin(directionType::rev, 50, velocityUnits::pct);
-    //   } else {
-    //     ctaMotor.stop();
-    //   }
-    // }
-    // if (Controller.ButtonL1.pressing()){
-    //   intakeMotorLeft.spin(directionType::fwd, 100, velocityUnits::pct);
-    //   intakeMotorRight.spin(directionType::rev, 100, velocityUnits::pct);
-    // }
+    
   }
 }
 
