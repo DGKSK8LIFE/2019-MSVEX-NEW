@@ -1,6 +1,4 @@
-.vscode/
-bin/
-build/
+/.vscode
+/bin
+/build
 compile_commands.json
-backup/
-backup*

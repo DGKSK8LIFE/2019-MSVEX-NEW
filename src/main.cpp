@@ -1,3 +1,309 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// vertArmMotor         motor         1               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         2               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
@@ -11,94 +317,34 @@
 using namespace vex;
 competition Competition;
 
-// define your global instances of motors and other devices here
-controller Controller;
-motor frontLeftMotor   (PORT12,  gearSetting::ratio18_1, false);
-motor backLeftMotor    (PORT11,   gearSetting::ratio18_1, false);
-motor frontRightMotor  (PORT10,  gearSetting::ratio18_1, false);
-motor backRightMotor   (PORT9,   gearSetting::ratio18_1, false);
-motor ctaMotor         (PORT16,  gearSetting::ratio18_1, false);
-motor intakeMotorLeft  (PORT13,  gearSetting::ratio18_1, false);
-motor intakeMotorRight (PORT8,   gearSetting::ratio18_1, false);
+void autonomous() {}
 
-
-
-/*---------------------------------------------------------------------------*/
-/*                          Pre-Autonomous Functions                         */
-/*                                                                           */
-/*  You may want to perform some actions before the competition starts.      */
-/*  Do them in the following function.  You must return from this function   */
-/*  or the autonomous and usercontrol tasks will not be started.  This       */
-/*  function is only called once after the cortex has been powered on and    */ 
-/*  not every time that the robot is disabled.                               */
-/*---------------------------------------------------------------------------*/
-
-void pre_auton( void ) {
-  // All activities that occur before the competition starts
-  // Example: clearing encoders, setting servo positions, ...               
-}
-
-/*---------------------------------------------------------------------------*/
-/*                                                                           */
-/*                              Autonomous Task                              */
-/*                                                                           */
-/*  This task is used to control your robot during the autonomous phase of   */
-/*  a VEX Competition.                                                       */
-/*                                                                           */
-/*  You must modify the code to add your own robot specific commands here.   */
-/*---------------------------------------------------------------------------*/
-
-void autonomous( void ) {
-  // ..........................................................................
-  // Insert autonomous user code here.
-  // ..........................................................................
-
-}
-
-/*---------------------------------------------------------------------------*/
-/*                                                                           */
-/*                              User Control Task                            */
-/*                                                                           */
-/*  This task is used to control your robot during the user control phase of */
-/*  a VEX Competition.                                                       */
-/*                                                                           */
-/*  You must modify the code to add your own robot specific commands here.   */
-/*---------------------------------------------------------------------------*/
-bool trayUp = false;
-void setTray(bool up) {
-  trayUp = up;
-  const int ang = (up) ? -315 : 0;
-  ctaMotor.rotateTo(ang, rotationUnits::deg, 50, velocityUnits::pct, false);
-}
-void toggleTray() {
-  setTray(!trayUp);
-}
-
-void usercontrol() {
-  while (true) {
-    Controller.ButtonL2.pressed(toggleTray);
-
-    // Drive Code (Split Arcade) //
-    double straight = Controller.Axis3.position();
-    double rotate = Controller.Axis1.position();
-
-    frontLeftMotor  .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
-    backLeftMotor   .spin(directionType::fwd, (straight + rotate), velocityUnits::pct);
-    frontRightMotor .spin(directionType::fwd, (straight - rotate), velocityUnits::pct);
-    backRightMotor  .spin(directionType::fwd, (straight - rotate), velocityUnits::pct);
-
-
-    if (Controller.ButtonL1.pressing()) {
-      intakeMotorLeft.spin(directionType::fwd, 100, velocityUnits::pct);
-    } else {
-      intakeMotorLeft.stop(brakeType::coast);
-    }
-    if (Controller.ButtonL1.pressing()) {
-      intakeMotorRight.spin(directionType::fwd, 100, velocityUnits::pct);
-    } else {
-      intakeMotorRight.stop(brakeType::coast);
-    }
+void usercontrol(void){
+  // loop
+  while (1) {
+    double thrust = Controller1.Axis3.position();
+    double rotate = Controller1.Axis1.position();
     
+    frontRight.spin(directionType::fwd, thrust - rotate, velocityUnits::pct);
+    backLeft.spin(directionType::fwd, thrust + rotate, velocityUnits::pct);
+    frontLeft.spin(directionType::fwd, thrust + rotate, velocityUnits::pct);
+    backRight.spin(directionType::fwd, thrust - rotate, velocityUnits::pct);
+
+    if (Controller1.ButtonR2.pressing()) {
+      vertArmMotor.spin(directionType::fwd, 100, velocityUnits::pct);
+    } else if (Controller1.ButtonR1.pressing()){
+      vertArmMotor.spin(directionType::rev, 100, velocityUnits::pct);
+    } else {
+      vertArmMotor.stop();
+    }
+
+    if (Controller1.ButtonL2.pressing()){
+      clawMotor.spin(directionType::fwd, 100, velocityUnits::pct);
+    } else if (Controller1.ButtonL1.pressing()) {
+      clawMotor.spin(directionType::rev, 100, velocityUnits::pct);
+    } else {
+      clawMotor.stop();
+    }
   }
 }
 
@@ -110,12 +356,9 @@ int main(){
     //Set up callbacks for autonomous and driver control periods.
     Competition.autonomous( autonomous );
     Competition.drivercontrol( usercontrol );
-    
-    //Run the pre-autonomous function. 
-    pre_auton();
        
     //Prevent main from exiting with an infinite loop.                        
     while(1) {
       vex::task::sleep(20);//Sleep the task for a short amount of time to prevent wasted resources.
-    }    
+    }
 }
