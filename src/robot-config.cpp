@@ -13,7 +13,7 @@ motor frontLeft = motor(PORT20, ratio18_1, false);
 motor frontRight = motor(PORT11, ratio18_1, true);
 motor backLeft = motor(PORT10, ratio18_1, false);
 motor backRight = motor(PORT2, ratio18_1, true);
-motor vertArmMotor = motor(PORT1, ratio18_1, false);
+motor vertArmMotor = motor(PORT1, ratio18_1, true);
 motor clawMotor = motor(PORT3, ratio18_1, false);
 
 // VEXcode generated functions
