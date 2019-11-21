@@ -1,4 +1,3 @@
-
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
@@ -6,7 +5,9 @@
 // frontLeft            motor         20              
 // frontRight           motor         11              
 // backLeft             motor         10              
-// backRight            motor         2               
+// backRight            motor         4               
+// vertArmMotor         motor         1               
+// clawMotor            motor         3               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 /*----------------------------------------------------------------------------*/
