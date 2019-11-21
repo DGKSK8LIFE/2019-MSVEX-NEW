@@ -35,19 +35,19 @@ void usercontrol(void){
     backRight.spin(directionType::fwd, thrust - rotate, velocityUnits::pct);
 
     if (Controller1.ButtonR2.pressing()) {
-      vertArmMotor.spin(directionType::fwd, 100, velocityUnits::pct);
+      clawMotor.spin(directionType::fwd, 100, velocityUnits::pct);
     } else if (Controller1.ButtonR1.pressing()){
-      vertArmMotor.spin(directionType::rev, 100, velocityUnits::pct);
+      clawMotor.spin(directionType::rev, 100, velocityUnits::pct);
     } else {
-      vertArmMotor.stop(brakeType::hold);
+      clawMotor.stop(brakeType::hold);
     }
 
     if (Controller1.ButtonL2.pressing()){
-      clawMotor.spin(directionType::rev, 100, velocityUnits::pct);
+      vertArmMotor.spin(directionType::rev, 100, velocityUnits::pct);
     } else if (Controller1.ButtonL1.pressing()) {
-      clawMotor.spin(directionType::fwd, 100, velocityUnits::pct);
+      vertArmMotor.spin(directionType::fwd, 100, velocityUnits::pct);
     } else {
-      clawMotor.stop(brakeType::hold);
+      vertArmMotor.stop(brakeType::hold);
     }
   }
 }
