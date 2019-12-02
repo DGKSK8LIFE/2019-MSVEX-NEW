@@ -20,10 +20,45 @@
 /*----------------------------------------------------------------------------*/
 #include "vex.h"
 
+#define PI 3.14159265358979323846
+#define REVS_PER_DEGREES 0.02
+const float wheel_diameter = 3;
+
 using namespace vex;
 competition Competition;
 
-void autonomous() {}
+float revsPerDegrees (float degrees){
+  return degrees * REVS_PER_DEGREES;
+}
+float revsPerInches(float wheelDiameter, float inches) {
+  return inches / (wheelDiameter * PI);
+}
+void setSpeed(int speed) {
+  frontLeft.setVelocity(speed, velocityUnits::pct);
+  frontRight.setVelocity(speed, velocityUnits::pct);
+  backLeft.setVelocity(speed, velocityUnits::pct);
+  backRight.setVelocity(speed, velocityUnits::pct);
+}
+void driveInches(float inches) {
+  const float revs = revsPerInches(wheel_diameter, inches);
+  frontLeft.rotateFor(revs, rotationUnits::rev, false);
+  frontRight.rotateFor(revs, rotationUnits::rev, false);
+  backLeft.rotateFor(revs, rotationUnits::rev, false);
+  backRight.rotateFor(revs, rotationUnits::rev);
+}
+void rotateDegrees(int degrees) {
+  const float revs = revsPerDegrees(degrees);
+  frontLeft.rotateFor(revs, rotationUnits::rev, false);
+  frontRight.rotateFor(revs, rotationUnits::rev, false);
+  backLeft.rotateFor(-revs, rotationUnits::rev, false);
+  backRight.rotateFor(-revs, rotationUnits::rev);
+}
+
+void autonomous() {
+  setSpeed(100);
+  clawMotor.spin(directionType::rev, 100, velocityUnits::pct);
+  driveInches(12);
+}
 
 void usercontrol(void){
   // loop
@@ -44,9 +79,9 @@ void usercontrol(void){
     }
 
     if (Controller1.ButtonL2.pressing()){
-      vertArmMotor.spin(directionType::rev, 100, velocityUnits::pct);
+      vertArmMotor.spin(directionType::rev, 50, velocityUnits::pct);
     } else if (Controller1.ButtonL1.pressing()) {
-      vertArmMotor.spin(directionType::fwd, 100, velocityUnits::pct);
+      vertArmMotor.spin(directionType::fwd, 50, velocityUnits::pct);
     } else {
       vertArmMotor.stop(brakeType::hold);
     }
