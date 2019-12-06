@@ -6,6 +6,29 @@
 // frontRight           motor         11              
 // backLeft             motor         10              
 // backRight            motor         4               
+// vertArmLeftMotor     motor         1               
+// clawMotor            motor         3               
+// vertArmRightMotor    motor         5               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         4               
+// vertArmLeftMotor     motor         1               
+// clawMotor            motor         3               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// frontLeft            motor         20              
+// frontRight           motor         11              
+// backLeft             motor         10              
+// backRight            motor         4               
 // vertArmMotor         motor         1               
 // clawMotor            motor         3               
 // ---- END VEXCODE CONFIGURED DEVICES ----
@@ -82,11 +105,14 @@ void usercontrol(void){
     }
 
     if (Controller1.ButtonL2.pressing()){
-      vertArmMotor.spin(directionType::rev, 50, velocityUnits::pct);
+      vertArmLeftMotor.spin(directionType::rev, 50, velocityUnits::pct);
+      vertArmRightMotor.spin(directionType::rev, 50, velocityUnits::pct);
     } else if (Controller1.ButtonL1.pressing()) {
-      vertArmMotor.spin(directionType::fwd, 50, velocityUnits::pct);
+      vertArmLeftMotor.spin(directionType::fwd, 50, velocityUnits::pct);
+      vertArmRightMotor.spin(directionType::fwd, 50, velocityUnits::pct);
     } else {
-      vertArmMotor.stop(brakeType::hold);
+      vertArmLeftMotor.stop(brakeType::hold);
+      vertArmRightMotor.stop(brakeType::hold);
     }
   }
 }

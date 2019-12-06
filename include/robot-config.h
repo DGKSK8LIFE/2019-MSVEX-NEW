@@ -8,8 +8,9 @@ extern motor frontLeft;
 extern motor frontRight;
 extern motor backLeft;
 extern motor backRight;
-extern motor vertArmMotor;
+extern motor vertArmLeftMotor;
 extern motor clawMotor;
+extern motor vertArmRightMotor;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Text.
