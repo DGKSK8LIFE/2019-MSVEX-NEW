@@ -77,13 +77,11 @@ void rotateDegrees(int degrees) {
   backRight.rotateFor(-revs, rotationUnits::rev);
 }
 
-void pre_auton() {
-  clawMotor.spin(directionType::rev, 100, velocityUnits::pct);
-}
-
 void autonomous() {
+  clawMotor.rotateTo(-270, rotationUnits::deg, 50, velocityUnits::pct);
+  task::sleep(1000);
   setSpeed(100);
-  driveInches(12);
+  driveInches(15);
 }
 
 void usercontrol(void){
@@ -122,8 +120,6 @@ void usercontrol(void){
 // Main will set up the competition functions and callbacks.
 //
 int main(){
-    // pre_auton 
-    pre_auton();
     //Set up callbacks for autonomous and driver control periods.
     Competition.autonomous( autonomous );
     Competition.drivercontrol( usercontrol );
